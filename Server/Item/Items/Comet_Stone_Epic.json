@@ -1,0 +1,91 @@
+{
+  "TranslationProperties": {
+    "Name": "Comet_Stone_Epic"
+  },
+  "Icon": "Icons/ItemsGenerated/Comet_Stone_Epic.png",
+  "Categories": [
+    "Blocks.Rocks"
+  ],
+  "Quality": "Epic",
+  "PlayerAnimationsId": "Block",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Resources/Crystals/Comet_Stone_Epic.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Resources/Crystals/Crystal_Big_Textures/Comet_Stone_Epic.png",
+        "Weight": 1
+      }
+    ],
+    "Flags": {
+      "IsUsable": true
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks",
+        "ItemId": "Rock_Stone_Cobble"
+      }
+    },
+    "Interactions": {
+      "Use": "Comet_Stone_Epic_Activate"
+    },
+    "VariantRotation": "DoublePipe",
+    "RandomRotation": "YawStep1",
+    "BlockParticleSetId": "Crystal",
+    "ParticleColor": "#9d4edd",
+    "Particles": [
+      {
+        "SystemId": "Comet_Beam_Epic",
+        "TargetEntityPart": "Self",
+        "PositionOffset": {
+          "X": 0.0,
+          "Y": 0.5,
+          "Z": 0.0
+        },
+        "RotationOffset": {
+          "Pitch": 0,
+          "Yaw": 0,
+          "Roll": 0
+        },
+        "Color": "#9d4edd",
+        "Scale": 1.0,
+        "DetachedFromModel": false
+      }
+    ],
+    "BlockSoundSetId": "Crystal",
+    "Light": {
+      "Color": "#9d4edd"
+    },
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    }
+  },
+  "IconProperties": {
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Scale": 0.5,
+    "Translation": [
+      1.8,
+      -17.4
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Rock"
+    ],
+    "Family": [
+      "Crystal"
+    ]
+  },
+  "MaxStack": 25,
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

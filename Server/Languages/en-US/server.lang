@@ -1,0 +1,6 @@
+# Comet Mod - NPC role names for tier variants
+server.npcRoles.Spider_Tier1.name = Spider
+server.npcRoles.Spider_Tier2.name = Spider
+server.npcRoles.Spider_Broodmother_Tier1.name = Spider Broodmother
+server.npcRoles.Spider_Broodmother_Tier2.name = Spider Broodmother
+server.npcRoles.Yeti_Tier2.name = Yeti

@@ -1,0 +1,15 @@
+{
+  "Group": "CustomMod",
+  "Name": "Comet Mod",
+  "Version": "1.0.0",
+  "Description": "Comet blocks that spawn waves of mobs when activated",
+  "Authors": [],
+  "Website": "",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "DisabledByDefault": false,
+  "Main": "com.cometmod.CometModPlugin",
+  "IncludesAssetPack": true,
+  "SubPlugins": []
+}

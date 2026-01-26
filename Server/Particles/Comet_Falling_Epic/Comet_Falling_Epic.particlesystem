@@ -1,0 +1,37 @@
+{
+  "CullDistance": 999.0,
+  "Spawners": [
+    {
+      "SpawnerId": "Comet_Falling_Epic_Green_Smoke",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.25,
+        "Z": 0
+      }
+    },
+    {
+      "SpawnerId": "Comet_Falling_Epic_Up_Green",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.1,
+        "Z": 0
+      },
+      "Attractors": []
+    },
+    {
+      "SpawnerId": "Comet_Falling_Epic_Center_Green",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.1,
+        "Z": 0
+      }
+    },
+    {
+      "SpawnerId": "Comet_Falling_Epic_Sparks_Green"
+    },
+    {
+      "SpawnerId": "Fireplace_Distortion"
+    }
+  ],
+  "$Comment": "Candidate to stay Cartoon"
+}

@@ -1,0 +1,12 @@
+{
+  "CullDistance": 999.0,
+  "Spawners": [
+    {
+      "SpawnerId": "Comet_Beam_Ray_Center",
+      "PositionOffset": {
+        "Y": -1
+      },
+      "StartDelay": 0.5
+    }
+  ]
+}

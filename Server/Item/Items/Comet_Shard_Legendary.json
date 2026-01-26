@@ -1,0 +1,40 @@
+{
+  "TranslationProperties": {
+    "Name": "Legendary Comet Shard"
+  },
+  "Categories": [
+    "Items.Ingredients"
+  ],
+  "Model": "Resources/Crystals/Comet_Shard_Legendary.blockymodel",
+  "Texture": "Resources/Crystals/Comet_Shard_Textures/Comet_Shard_Legendary.png",
+  "Quality": "Legendary",
+  "ItemLevel": 10,
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 0.75,
+    "Translation": [
+      -0.3,
+      0.3
+    ],
+    "Rotation": [
+      34.315,
+      29.815,
+      22.5
+    ]
+  },
+  "Scale": 1.2,
+  "Icon": "Icons/ItemsGenerated/Comet_Shard_Legendary.png",
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ],
+    "Family": [
+      "Crystal"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "ItemSoundSetId": "ISS_Items_Gems",
+  "DropOnDeath": true
+}

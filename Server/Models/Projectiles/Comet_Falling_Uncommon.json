@@ -1,0 +1,32 @@
+{
+  "Model": "Items/Projectiles/Comet_Falling_Uncommon.blockymodel",
+  "Texture": "Items/Projectiles/Comet_Falling_Uncommon.png",
+  "HitBox": {
+    "Max": {
+      "X": 0.1,
+      "Y": 0.1,
+      "Z": 0.1
+    },
+    "Min": {
+      "X": -0.1,
+      "Y": -0.1,
+      "Z": -0.1
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "Particles": [
+    {
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "SystemId": "Comet_Falling_Uncommon",
+      "TargetNodeName": ""
+    }
+  ],
+  "Light": {
+    "Color": "#a1ff30"
+  }
+}

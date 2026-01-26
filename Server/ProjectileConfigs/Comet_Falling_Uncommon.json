@@ -1,0 +1,31 @@
+{
+  "Model": "Comet_Falling_Uncommon",
+  "SpawnRotationOffset": {
+    "Pitch": 0,
+    "Yaw": 0,
+    "Roll": 0
+  },
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 35,
+    "TerminalVelocityAir": 100,
+    "TerminalVelocityWater": 50,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": false
+  },
+  "LaunchForce": 0,
+  "SpawnOffset": {
+    "X": 0,
+    "Y": 0,
+    "Z": 0
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Type": "RemoveEntity",
+      "Entity": "User"
+    }
+  },
+  "ParticleSystem": "Comet_Falling_Uncommon"
+}
+

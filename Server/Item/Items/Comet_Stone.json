@@ -1,0 +1,91 @@
+{
+  "TranslationProperties": {
+    "Name": "Comet_Stone_Uncommon"
+  },
+  "Icon": "Icons/ItemsGenerated/Comet_Stone.png",
+  "Categories": [
+    "Blocks.Rocks"
+  ],
+  "Quality": "Uncommon",
+  "PlayerAnimationsId": "Block",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Resources/Crystals/Comet_Stone.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Resources/Crystals/Crystal_Big_Textures/Comet_Stone.png",
+        "Weight": 1
+      }
+    ],
+    "Flags": {
+      "IsUsable": true
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks",
+        "ItemId": "Rock_Stone_Cobble"
+      }
+    },
+    "Interactions": {
+      "Use": "Comet_Stone_Activate"
+    },
+    "VariantRotation": "DoublePipe",
+    "RandomRotation": "YawStep1",
+    "BlockParticleSetId": "Crystal",
+    "ParticleColor": "#23b333",
+    "Particles": [
+      {
+        "SystemId": "Comet_Beam",
+        "TargetEntityPart": "Self",
+        "PositionOffset": {
+          "X": 0.0,
+          "Y": 0.5,
+          "Z": 0.0
+        },
+        "RotationOffset": {
+          "Pitch": 0,
+          "Yaw": 0,
+          "Roll": 0
+        },
+        "Color": "#e0ff7d",
+        "Scale": 1.0,
+        "DetachedFromModel": false
+      }
+    ],
+    "BlockSoundSetId": "Crystal",
+    "Light": {
+      "Color": "#ad9"
+    },
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    }
+  },
+  "IconProperties": {
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Scale": 0.5,
+    "Translation": [
+      1.8,
+      -17.4
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Rock"
+    ],
+    "Family": [
+      "Crystal"
+    ]
+  },
+  "MaxStack": 25,
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

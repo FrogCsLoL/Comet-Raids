@@ -1,0 +1,18 @@
+server.items.Comet_Stone_Uncommon.name = Comet (Uncommon)
+server.items.Comet_Stone_Uncommon.description = A mysterious stone that spawns waves of enemies when activated. Defeat them to claim the rewards!
+server.items.Comet_Stone_Epic.name = Comet (Epic)
+server.items.Comet_Stone_Epic.description = A powerful stone that spawns waves of enemies when activated. Defeat them to claim the rewards!
+server.items.Comet_Stone_Rare.name = Comet (Rare)
+server.items.Comet_Stone_Rare.description = A rare stone that spawns waves of enemies when activated. Defeat them to claim the rewards!
+server.items.Comet_Stone_Legendary.name = Comet (Legendary)
+server.items.Comet_Stone_Legendary.description = A legendary stone that spawns waves of enemies when activated. Defeat them to claim the rewards!
+
+server.items.Comet_Shard_Uncommon.name = Comet Shard (Uncommon)
+server.items.Comet_Shard_Epic.name = Comet Shard (Epic)
+server.items.Comet_Shard_Rare.name = Comet Shard (Rare)
+server.items.Comet_Shard_Legendary.name = Comet Shard (Legendary)
+
+server.items.Weapon_Daggers_Butterfly.name = Butterfly Dagger
+server.items.Weapon_Daggers_Butterfly_Rare.name = Butterfly Dagger (Rare)
+server.items.Weapon_Daggers_Butterfly_Epic.name = Butterfly Dagger (Epic)
+server.items.Weapon_Daggers_Butterfly_Legendary.name = Butterfly Dagger (Legendary)

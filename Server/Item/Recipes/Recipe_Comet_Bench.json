@@ -1,0 +1,18 @@
+{
+    "Input": [
+        {
+            "ItemId": "Comet_Shard_Uncommon",
+            "Quantity": 5
+        }
+    ],
+    "PrimaryOutput": {
+        "ItemId": "Comet_Bench",
+        "Quantity": 1
+    },
+    "BenchRequirement": [
+        {
+            "Type": "Crafting",
+            "Id": "Fieldcraft"
+        }
+    ]
+}

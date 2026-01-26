@@ -1,0 +1,24 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Intelligent",
+  "Modify": {
+    "Appearance": "CustomNPC_MyCharacter",
+    "DefaultPlayerAttitude": "Neutral",
+    "MaxHealth": 100,
+    "DropList": "Empty",
+    "Weapons": [
+      "Weapon_Daggers_Iron",
+      "Weapon_Daggers_Iron"
+    ],
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.CustomNPC_MyCharacter.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}
+

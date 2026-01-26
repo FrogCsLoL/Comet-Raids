@@ -1,0 +1,2166 @@
+{
+  "spawnSettings": {
+    "minDelaySeconds": 120,
+    "maxDelaySeconds": 300,
+    "spawnChance": 0.4,
+    "despawnTimeMinutes": 30.0,
+    "minSpawnDistance": 30,
+    "maxSpawnDistance": 50,
+    "globalComets": false
+  },
+  "zoneSpawnChances": {
+    "0": { "tier1": 1.0, "tier2": 0.0, "tier3": 0.0, "tier4": 0.0 },
+    "1": { "tier1": 0.8, "tier2": 0.2, "tier3": 0.0, "tier4": 0.0 },
+    "2": { "tier1": 0.4, "tier2": 0.4, "tier3": 0.2, "tier4": 0.0 },
+    "3": { "tier1": 0.0, "tier2": 0.3, "tier3": 0.5, "tier4": 0.2 },
+    "default": { "tier1": 0.0, "tier2": 0.0, "tier3": 0.4, "tier4": 0.6 }
+  },
+  "tierSettings": {
+    "1": {
+      "timeoutSeconds": 90,
+      "minRadius": 3.0,
+      "maxRadius": 5.0
+    },
+    "2": {
+      "timeoutSeconds": 150,
+      "minRadius": 4.0,
+      "maxRadius": 6.0
+    },
+    "3": {
+      "timeoutSeconds": 180,
+      "minRadius": 5.0,
+      "maxRadius": 7.0
+    },
+    "4": {
+      "timeoutSeconds": 240,
+      "minRadius": 6.0,
+      "maxRadius": 8.0
+    }
+  },
+  "rewardSettings": {
+    "1": {
+      "drops": [
+        {
+          "id": "Ingredient_Bar_Copper",
+          "minCount": 5,
+          "maxCount": 7,
+          "chance": 100,
+          "displayName": "Copper Ingots"
+        },
+        {
+          "id": "Ingredient_Leather_Light",
+          "minCount": 2,
+          "maxCount": 3,
+          "chance": 100,
+          "displayName": "Light Leather"
+        },
+        {
+          "id": "Potion_Health_Lesser",
+          "minCount": 1,
+          "maxCount": 2,
+          "chance": 100,
+          "displayName": "Lesser Health Potion"
+        },
+        {
+          "id": "Weapon_Bomb",
+          "minCount": 3,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Bombs"
+        },
+        {
+          "id": "Weapon_Bomb_Potion_Poison",
+          "minCount": 1,
+          "maxCount": 1,
+          "chance": 100,
+          "displayName": "Poison Potion Bomb"
+        }
+      ]
+    },
+    "2": {
+      "drops": [
+        {
+          "id": "Ingredient_Bar_Iron",
+          "minCount": 5,
+          "maxCount": 7,
+          "chance": 100,
+          "displayName": "Iron Ingots"
+        },
+        {
+          "id": "Ingredient_Bar_Copper",
+          "minCount": 2,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Copper Ingots"
+        },
+        {
+          "id": "Ingredient_Leather_Medium",
+          "minCount": 2,
+          "maxCount": 3,
+          "chance": 100,
+          "displayName": "Medium Leather"
+        },
+        {
+          "id": "Potion_Health",
+          "minCount": 1,
+          "maxCount": 2,
+          "chance": 100,
+          "displayName": "Potion of Health"
+        },
+        {
+          "id": "Potion_Health_Lesser",
+          "minCount": 1,
+          "maxCount": 1,
+          "chance": 100,
+          "displayName": "Lesser Health Potion"
+        },
+        {
+          "id": "Ingredient_Fire_Essence",
+          "minCount": 3,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Essence of Fire"
+        },
+        {
+          "id": "Ingredient_Fabric_Scrap_Shadoweave",
+          "minCount": 5,
+          "maxCount": 5,
+          "chance": 100,
+          "displayName": "Shadoweave Scraps"
+        },
+        {
+          "id": "Weapon_Bomb",
+          "minCount": 4,
+          "maxCount": 5,
+          "chance": 100,
+          "displayName": "Bombs"
+        },
+        {
+          "id": "Weapon_Bomb_Potion_Poison",
+          "minCount": 1,
+          "maxCount": 2,
+          "chance": 100,
+          "displayName": "Poison Potion Bomb"
+        }
+      ]
+    },
+    "3": {
+      "drops": [
+        {
+          "id": "Ingredient_Bar_Cobalt",
+          "minCount": 5,
+          "maxCount": 7,
+          "chance": 100,
+          "displayName": "Cobalt Ingots"
+        },
+        {
+          "id": "Ingredient_Bar_Thorium",
+          "minCount": 5,
+          "maxCount": 7,
+          "chance": 100,
+          "displayName": "Thorium Ingots"
+        },
+        {
+          "id": "Ingredient_Bar_Copper",
+          "minCount": 2,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Copper Ingots"
+        },
+        {
+          "id": "Ingredient_Bar_Iron",
+          "minCount": 2,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Iron Ingots"
+        },
+        {
+          "id": "Ingredient_Leather_Heavy",
+          "minCount": 2,
+          "maxCount": 3,
+          "chance": 100,
+          "displayName": "Heavy Leather"
+        },
+        {
+          "id": "Potion_Health_Greater",
+          "minCount": 1,
+          "maxCount": 2,
+          "chance": 100,
+          "displayName": "Greater Health Potion"
+        },
+        {
+          "id": "Potion_Health_Lesser",
+          "minCount": 1,
+          "maxCount": 1,
+          "chance": 100,
+          "displayName": "Lesser Health Potion"
+        },
+        {
+          "id": "Potion_Health",
+          "minCount": 1,
+          "maxCount": 1,
+          "chance": 100,
+          "displayName": "Potion of Health"
+        },
+        {
+          "id": "Ingredient_Fire_Essence",
+          "minCount": 3,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Essence of Fire"
+        },
+        {
+          "id": "Ingredient_Fabric_Scrap_Shadoweave",
+          "minCount": 5,
+          "maxCount": 5,
+          "chance": 100,
+          "displayName": "Shadoweave Scraps"
+        },
+        {
+          "id": "Weapon_Bomb",
+          "minCount": 5,
+          "maxCount": 6,
+          "chance": 100,
+          "displayName": "Bombs"
+        },
+        {
+          "id": "Weapon_Bomb_Potion_Poison",
+          "minCount": 2,
+          "maxCount": 3,
+          "chance": 100,
+          "displayName": "Poison Potion Bomb"
+        }
+      ]
+    },
+    "4": {
+      "drops": [
+        {
+          "id": "Ingredient_Bar_Adamantite",
+          "minCount": 5,
+          "maxCount": 8,
+          "chance": 100,
+          "displayName": "Adamantite Ingots"
+        },
+        {
+          "id": "Ingredient_Bar_Copper",
+          "minCount": 3,
+          "maxCount": 5,
+          "chance": 100,
+          "displayName": "Copper Ingots"
+        },
+        {
+          "id": "Ingredient_Bar_Iron",
+          "minCount": 3,
+          "maxCount": 5,
+          "chance": 100,
+          "displayName": "Iron Ingots"
+        },
+        {
+          "id": "Ingredient_Bar_Cobalt",
+          "minCount": 2,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Cobalt Ingots"
+        },
+        {
+          "id": "Ingredient_Bar_Thorium",
+          "minCount": 2,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Thorium Ingots"
+        },
+        {
+          "id": "Ingredient_Leather_Heavy",
+          "minCount": 3,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Heavy Leather"
+        },
+        {
+          "id": "Potion_Health_Greater",
+          "minCount": 2,
+          "maxCount": 3,
+          "chance": 100,
+          "displayName": "Greater Health Potion"
+        },
+        {
+          "id": "Potion_Health_Lesser",
+          "minCount": 1,
+          "maxCount": 2,
+          "chance": 100,
+          "displayName": "Lesser Health Potion"
+        },
+        {
+          "id": "Potion_Health",
+          "minCount": 1,
+          "maxCount": 2,
+          "chance": 100,
+          "displayName": "Potion of Health"
+        },
+        {
+          "id": "Ingredient_Fire_Essence",
+          "minCount": 4,
+          "maxCount": 6,
+          "chance": 100,
+          "displayName": "Essence of Fire"
+        },
+        {
+          "id": "Ingredient_Fabric_Scrap_Shadoweave",
+          "minCount": 8,
+          "maxCount": 10,
+          "chance": 100,
+          "displayName": "Shadoweave Scraps"
+        },
+        {
+          "id": "Weapon_Bomb",
+          "minCount": 6,
+          "maxCount": 8,
+          "chance": 100,
+          "displayName": "Bombs"
+        },
+        {
+          "id": "Weapon_Bomb_Potion_Poison",
+          "minCount": 3,
+          "maxCount": 4,
+          "chance": 100,
+          "displayName": "Poison Potion Bomb"
+        }
+      ]
+    }
+  },
+  "themes": {
+    "skeleton": {
+      "displayName": "Skeleton Horde",
+      "tiers": [
+        1,
+        2
+      ],
+      "mobs": [
+        {
+          "id": "Skeleton_Soldier",
+          "count": 3,
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.38,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Archer",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.69,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Archmage",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.68,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.7,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Bear_Polar",
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.46,
+              "damage": 1.5,
+              "scale": 1.4,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Wolf_Black",
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 0.81,
+              "scale": 1.2,
+              "speed": 0.9
+            },
+            "2": {
+              "hp": 1.7,
+              "damage": 1.28,
+              "scale": 1.4,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "goblin": {
+      "displayName": "Goblin Gang",
+      "tiers": [
+        1,
+        2
+      ],
+      "mobs": [
+        {
+          "id": "Goblin_Scrapper",
+          "count": 2,
+          "stats": {
+            "1": {
+              "hp": 1.5,
+              "damage": 1.3,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 2.71,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Goblin_Miner",
+          "count": 2,
+          "stats": {
+            "1": {
+              "hp": 1.5,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 2.71,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Goblin_Lobber",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.5,
+              "damage": 0.5,
+              "scale": 1.0,
+              "speed": 0.7
+            },
+            "2": {
+              "hp": 1.2,
+              "damage": 1.0,
+              "scale": 1.1,
+              "speed": 0.9
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Bear_Polar",
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 2.92,
+              "damage": 1.5,
+              "scale": 1.4,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Wolf_Black",
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 0.81,
+              "scale": 1.2,
+              "speed": 0.9
+            },
+            "2": {
+              "hp": 1.7,
+              "damage": 1.28,
+              "scale": 1.4,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "spider": {
+      "displayName": "Spider Swarm",
+      "tiers": [
+        1,
+        2
+      ],
+      "mobs": [
+        {
+          "id": "Spider",
+          "count": {
+            "1": 4,
+            "2": 5
+          },
+          "stats": {
+            "1": {
+              "hp": 1.02,
+              "damage": 0.87,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.43,
+              "damage": 1.09,
+              "scale": 1.1,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Spider",
+          "stats": {
+            "1": {
+              "hp": 2.0,
+              "damage": 1.0,
+              "scale": 2.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 3.0,
+              "damage": 1.4,
+              "scale": 2.5,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "trork": {
+      "displayName": "Trork Warband",
+      "tiers": [
+        1,
+        2,
+        3
+      ],
+      "mobs": [
+        {
+          "id": "Trork_Warrior",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.66,
+              "damage": 0.65,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.6,
+              "damage": 1.0,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 2.6,
+              "damage": 1.3,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Trork_Hunter",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.7,
+              "damage": 0.57,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 2.0,
+              "damage": 1.0,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 2.5,
+              "damage": 1.3,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Trork_Mauler",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.7,
+              "damage": 0.57,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.5,
+              "damage": 0.87,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 2.51,
+              "damage": 1.3,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Trork_Shaman",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.7,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.3,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 2.31,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Trork_Brawler",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.7,
+              "damage": 0.57,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.5,
+              "damage": 1.0,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 2.52,
+              "damage": 1.39,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Trork_Chieftain",
+          "stats": {
+            "1": {
+              "hp": 0.42,
+              "damage": 0.4,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.0,
+              "damage": 0.7,
+              "scale": 1.4,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 2.63,
+              "damage": 1.2,
+              "scale": 1.9,
+              "speed": 1.2
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "skeleton_sand": {
+      "displayName": "Sand Skeleton Legion",
+      "tiers": [
+        1,
+        2,
+        3
+      ],
+      "mobs": [
+        {
+          "id": "Skeleton_Sand_Archer",
+          "count": {
+            "1": 1,
+            "2": 1,
+            "3": 3
+          },
+          "stats": {
+            "1": {
+              "hp": 0.59,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.0,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.52,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Sand_Assassin",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.59,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.0,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.52,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Sand_Guard",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.59,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.0,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.52,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Sand_Mage",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.59,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.0,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.53,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Sand_Ranger",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.86,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.0,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.52,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Bear_Grizzly",
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 0.67,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 2.0,
+              "damage": 1.0,
+              "scale": 1.4,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 3.0,
+              "damage": 1.37,
+              "scale": 1.6,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 4.29,
+              "damage": 1.69,
+              "scale": 2.0,
+              "speed": 1.4
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Burnt_Alchemist",
+          "stats": {
+            "1": {
+              "hp": 0.1,
+              "damage": 1.0,
+              "scale": 1.5,
+              "speed": 0.6
+            },
+            "2": {
+              "hp": 0.3,
+              "damage": 1.0,
+              "scale": 1.5,
+              "speed": 0.6
+            },
+            "3": {
+              "hp": 0.5,
+              "damage": 1.0,
+              "scale": 1.5,
+              "speed": 0.6
+            },
+            "4": {
+              "hp": 0.7,
+              "damage": 1.0,
+              "scale": 1.5,
+              "speed": 0.6
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "sabertooth": {
+      "displayName": "Sabertooth Pack",
+      "tiers": [
+        1,
+        2,
+        3
+      ],
+      "mobs": [
+        {
+          "id": "Tiger_Sabertooth",
+          "count": {
+            "1": 3,
+            "2": 5,
+            "3": 5
+          },
+          "stats": {
+            "1": {
+              "hp": 0.6,
+              "damage": 0.5,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.0,
+              "damage": 0.54,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.3,
+              "damage": 0.78,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Bear_Grizzly",
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 0.67,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 2.0,
+              "damage": 1.0,
+              "scale": 1.4,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 3.0,
+              "damage": 1.37,
+              "scale": 1.6,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 4.29,
+              "damage": 1.69,
+              "scale": 2.0,
+              "speed": 1.4
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Burnt_Alchemist",
+          "stats": {
+            "1": {
+              "hp": 0.1,
+              "damage": 1.0,
+              "scale": 1.5,
+              "speed": 0.6
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "outlander": {
+      "displayName": "Outlander Cult",
+      "tiers": [
+        2,
+        3,
+        4
+      ],
+      "mobs": [
+        {
+          "id": "Outlander_Berserker",
+          "count": 2,
+          "stats": {
+            "2": {
+              "hp": 0.43,
+              "damage": 0.56,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 0.6,
+              "damage": 0.93,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.4,
+              "damage": 1.1,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Outlander_Cultist",
+          "count": 1,
+          "stats": {
+            "2": {
+              "hp": 0.49,
+              "damage": 0.71,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 0.74,
+              "damage": 0.95,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 1.3,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Outlander_Hunter",
+          "count": 1,
+          "stats": {
+            "2": {
+              "hp": 0.66,
+              "damage": 0.7,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.62,
+              "damage": 1.32,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Outlander_Stalker",
+          "count": 1,
+          "stats": {
+            "2": {
+              "hp": 0.66,
+              "damage": 0.65,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.5,
+              "damage": 1.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 2.62,
+              "damage": 1.32,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Outlander_Brute",
+          "stats": {
+            "2": {
+              "hp": 1.2,
+              "damage": 1.0,
+              "scale": 1.3,
+              "speed": 1.1
+            },
+            "3": {
+              "hp": 2.22,
+              "damage": 1.51,
+              "scale": 1.6,
+              "speed": 1.35
+            },
+            "4": {
+              "hp": 3.21,
+              "damage": 2.14,
+              "scale": 2.8,
+              "speed": 1.5
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "leopard": {
+      "displayName": "Snow Leopard Pride",
+      "tiers": [
+        2,
+        3,
+        4
+      ],
+      "mobs": [
+        {
+          "id": "Leopard_Snow",
+          "count": {
+            "2": 3,
+            "3": 5,
+            "4": 5
+          },
+          "stats": {
+            "2": {
+              "hp": 0.65,
+              "damage": 0.62,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.61,
+              "damage": 1.33,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Werewolf",
+          "stats": {
+            "2": {
+              "hp": 0.4,
+              "damage": 0.33,
+              "scale": 1.0,
+              "speed": 0.9
+            },
+            "3": {
+              "hp": 0.64,
+              "damage": 0.68,
+              "scale": 1.6,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.21,
+              "damage": 0.83,
+              "scale": 1.8,
+              "speed": 1.2
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "skeleton_burnt": {
+      "displayName": "Burnt Legion",
+      "tiers": [
+        3,
+        4
+      ],
+      "mobs": [
+        {
+          "id": "Skeleton_Burnt_Archer",
+          "count": 1,
+          "stats": {
+            "3": {
+              "hp": 0.62,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 2.5,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Burnt_Gunner",
+          "count": 1,
+          "stats": {
+            "3": {
+              "hp": 0.62,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 2.5,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Burnt_Knight",
+          "count": 1,
+          "stats": {
+            "3": {
+              "hp": 0.62,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 2.5,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Burnt_Lancer",
+          "count": 2,
+          "stats": {
+            "3": {
+              "hp": 0.62,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 2.5,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Skeleton_Burnt_Praetorian",
+          "stats": {
+            "3": {
+              "hp": 0.62,
+              "damage": 2.5,
+              "scale": 1.6,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 3.0,
+              "scale": 1.8,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "void": {
+      "displayName": "Voidspawn",
+      "tiers": [
+        1,
+        2,
+        3
+      ],
+      "mobs": [
+        {
+          "id": "Crawler_Void",
+          "count": 2,
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.2,
+              "damage": 1.3,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 2.3,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 3.0,
+              "damage": 2.5,
+              "scale": 1.3,
+              "speed": 1.2
+            }
+          }
+        },
+        {
+          "id": "Spectre_Void",
+          "count": 2,
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.2,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Eye_Void",
+          "count": {
+            "2": 1,
+            "3": 1,
+            "4": 1
+          },
+          "stats": {
+            "2": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 2.0,
+              "damage": 1.5,
+              "scale": 1.3,
+              "speed": 1.1
+            },
+            "4": {
+              "hp": 3.0,
+              "damage": 2.5,
+              "scale": 1.8,
+              "speed": 1.1
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Spawn_Void",
+          "stats": {
+            "1": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.6,
+              "damage": 1.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 2.0,
+              "damage": 1.6,
+              "scale": 1.4,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 3.0,
+              "damage": 2.5,
+              "scale": 1.8,
+              "speed": 1.1
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "ice": {
+      "displayName": "Legendary Ice",
+      "tiers": [
+        3,
+        4
+      ],
+      "mobs": [
+        {
+          "id": "Yeti",
+          "count": 1,
+          "stats": {
+            "2": {
+              "hp": 2.66,
+              "damage": 1.9,
+              "scale": 1.1,
+              "speed": 1.6
+            },
+            "3": {
+              "hp": 3.6,
+              "damage": 3.0,
+              "scale": 1.2,
+              "speed": 1.8
+            },
+            "4": {
+              "hp": 5.0,
+              "damage": 5.5,
+              "scale": 1.3,
+              "speed": 1.4
+            }
+          }
+        },
+        {
+          "id": "Bear_Polar",
+          "count": 2,
+          "stats": {
+            "1": {
+              "hp": 1.5,
+              "damage": 1.2,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 2.0,
+              "damage": 1.8,
+              "scale": 1.1,
+              "speed": 1.2
+            }
+          }
+        },
+        {
+          "id": "Golem_Crystal_Frost",
+          "count": 1,
+          "stats": {
+            "3": {
+              "hp": 1.8,
+              "damage": 3.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 3.0,
+              "damage": 5.5,
+              "scale": 1.4,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Leopard_Snow",
+          "count": 2,
+          "stats": {
+            "2": {
+              "hp": 0.65,
+              "damage": 0.72,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.61,
+              "damage": 1.53,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Spirit_Frost",
+          "stats": {
+            "3": {
+              "hp": 2.0,
+              "damage": 1.5,
+              "scale": 1.6,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 3.0,
+              "damage": 2.5,
+              "scale": 2.8,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "burnt_legendary": {
+      "displayName": "Legendary Burnt",
+      "tiers": [
+        3,
+        4
+      ],
+      "mobs": [
+        {
+          "id": "Skeleton_Burnt_Archer",
+          "count": 3,
+          "stats": {
+            "3": {
+              "hp": 0.62,
+              "damage": 1.5,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 2.0,
+              "scale": 1.4,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Burnt_Alchemist",
+          "count": 1,
+          "stats": {
+            "1": {
+              "hp": 0.45,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 0.75,
+              "damage": 1.5,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 0.92,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.16,
+              "damage": 2.5,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Burnt_Lancer",
+          "count": 4,
+          "stats": {
+            "3": {
+              "hp": 1.62,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.1
+            },
+            "4": {
+              "hp": 2.0,
+              "damage": 2.5,
+              "scale": 1.4,
+              "speed": 1.3
+            }
+          }
+        },
+        {
+          "id": "Skeleton_Burnt_Knight",
+          "count": 2,
+          "stats": {
+            "3": {
+              "hp": 1.0,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 2.0,
+              "damage": 3.0,
+              "scale": 1.4,
+              "speed": 1.1
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Skeleton_Burnt_Praetorian",
+          "stats": {
+            "3": {
+              "hp": 1.3,
+              "damage": 2.5,
+              "scale": 1.6,
+              "speed": 1.1
+            },
+            "4": {
+              "hp": 2.4,
+              "damage": 4.0,
+              "scale": 2.2,
+              "speed": 1.3
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "lava": {
+      "displayName": "Legendary Lava",
+      "tiers": [
+        3,
+        4
+      ],
+      "mobs": [
+        {
+          "id": "Emberwulf",
+          "count": 1,
+          "stats": {
+            "3": {
+              "hp": 0.8,
+              "damage": 0.4,
+              "scale": 1.2,
+              "speed": 1.1
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 0.8,
+              "scale": 1.3,
+              "speed": 1.1
+            }
+          }
+        },
+        {
+          "id": "Golem_Firesteel",
+          "count": 2,
+          "stats": {
+            "3": {
+              "hp": 0.8,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 2.2,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        },
+        {
+          "id": "Spirit_Ember",
+          "count": 1,
+          "stats": {
+            "3": {
+              "hp": 0.79,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 2.5,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Toad_Rhino_Magma",
+          "stats": {
+            "3": {
+              "hp": 1.86,
+              "damage": 0.66,
+              "scale": 1.6,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 3.0,
+              "damage": 1.4,
+              "scale": 3.0,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "earth": {
+      "displayName": "Legendary Earth",
+      "tiers": [
+        3,
+        4
+      ],
+      "mobs": [
+        {
+          "id": "Golem_Crystal_Earth",
+          "count": 1,
+          "stats": {
+            "3": {
+              "hp": 0.8,
+              "damage": 2.0,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.4,
+              "damage": 2.5,
+              "scale": 1.4,
+              "speed": 1.2
+            }
+          }
+        },
+        {
+          "id": "Bear_Grizzly",
+          "count": 2,
+          "stats": {
+            "1": {
+              "hp": 0.59,
+              "damage": 0.67,
+              "scale": 1.0,
+              "speed": 1.0
+            },
+            "2": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.1,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 0.97,
+              "damage": 0.87,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.39,
+              "damage": 1.29,
+              "scale": 1.4,
+              "speed": 1.1
+            }
+          }
+        },
+        {
+          "id": "Hyena",
+          "count": 4,
+          "stats": {
+            "3": {
+              "hp": 0.8,
+              "damage": 1.0,
+              "scale": 1.2,
+              "speed": 1.2
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 1.3,
+              "scale": 1.3,
+              "speed": 1.2
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Hedera",
+          "stats": {
+            "3": {
+              "hp": 1.4,
+              "damage": 1.4,
+              "scale": 1.8,
+              "speed": 1.3
+            },
+            "4": {
+              "hp": 2.1,
+              "damage": 2.0,
+              "scale": 2.2,
+              "speed": 1.3
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "undead": {
+      "displayName": "Undead Horde",
+      "tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "mobs": [
+        {
+          "id": "Pig_Undead",
+          "count": {
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 6
+          },
+          "stats": {
+            "1": {
+              "hp": 0.44,
+              "damage": 0.56,
+              "scale": 0.7,
+              "speed": 0.8
+            },
+            "2": {
+              "hp": 0.7,
+              "damage": 0.65,
+              "scale": 0.8,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 0.85,
+              "damage": 0.7,
+              "scale": 0.9,
+              "speed": 1.3
+            },
+            "4": {
+              "hp": 0.9,
+              "damage": 0.9,
+              "scale": 1.0,
+              "speed": 1.5
+            }
+          }
+        },
+        {
+          "id": "Cow_Undead",
+          "count": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4
+          },
+          "stats": {
+            "1": {
+              "hp": 0.48,
+              "damage": 0.43,
+              "scale": 0.7,
+              "speed": 0.8
+            },
+            "2": {
+              "hp": 0.5,
+              "damage": 0.66,
+              "scale": 0.8,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 0.7,
+              "damage": 0.8,
+              "scale": 1.0,
+              "speed": 1.3
+            },
+            "4": {
+              "hp": 0.8,
+              "damage": 0.9,
+              "scale": 1.0,
+              "speed": 1.5
+            }
+          }
+        },
+        {
+          "id": "Chicken_Undead",
+          "count": {
+            "1": 2,
+            "2": 3,
+            "3": 3,
+            "4": 5
+          },
+          "stats": {
+            "1": {
+              "hp": 0.66,
+              "damage": 0.52,
+              "scale": 0.7,
+              "speed": 1.8
+            },
+            "2": {
+              "hp": 0.8,
+              "damage": 0.65,
+              "scale": 0.7,
+              "speed": 1.0
+            },
+            "3": {
+              "hp": 0.7,
+              "damage": 0.9,
+              "scale": 0.8,
+              "speed": 1.3
+            },
+            "4": {
+              "hp": 0.75,
+              "damage": 1.0,
+              "scale": 1.0,
+              "speed": 1.5
+            }
+          }
+        },
+        {
+          "id": "Hound_Bleached",
+          "count": {
+            "3": 2,
+            "4": 5
+          },
+          "stats": {
+            "3": {
+              "hp": 0.30,
+              "damage": 0.3,
+              "scale": 0.7,
+              "speed": 1.2
+            },
+            "4": {
+              "hp": 0.5,
+              "damage": 0.5,
+              "scale": 1.0,
+              "speed": 1.5
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Golem_Crystal_Thunder_Comet",
+          "stats": {
+            "1": {
+              "hp": 0.67,
+              "damage": 1.5,
+              "scale": 1.2,
+              "speed": 2.4
+            },
+            "2": {
+              "hp": 0.8,
+              "damage": 2.0,
+              "scale": 1.4,
+              "speed": 2.4
+            },
+            "3": {
+              "hp": 2.0,
+              "damage": 2.5,
+              "scale": 1.6,
+              "speed": 2.4
+            },
+            "4": {
+              "hp": 3.2,
+              "damage": 2.5,
+              "scale": 2.0,
+              "speed": 2.4
+            }
+          }
+        },
+        {
+          "id": "Wraith",
+          "stats": {
+            "3": {
+              "hp": 2.4,
+              "damage": 0.8,
+              "scale": 1.6,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.8,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+    "zombie": {
+      "displayName": "Zombie Aberration",
+      "tiers": [
+        3,
+        4
+      ],
+      "mobs": [
+        {
+          "id": "Zombie_Aberrant_Small",
+          "count": {
+            "3": 3,
+            "4": 5
+          },
+          "stats": {
+            "3": {
+              "hp": 1.17,
+              "damage": 1.53,
+              "scale": 1.2,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.9,
+              "damage": 2.0,
+              "scale": 1.3,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "bosses": [
+        {
+          "id": "Zombie_Aberrant",
+          "stats": {
+            "3": {
+              "hp": 0.51,
+              "damage": 0.66,
+              "scale": 1.3,
+              "speed": 1.0
+            },
+            "4": {
+              "hp": 1.0,
+              "damage": 1.0,
+              "scale": 1.8,
+              "speed": 1.0
+            }
+          }
+        }
+      ],
+      "randomBossSelection": true
+    },
+
+    "_comment_multiwave": "EXAMPLE: Multi-wave theme with 2 normal waves + 1 boss wave",
+    "skeleton_siege": {
+      "displayName": "Skeleton Siege",
+      "testOnly": true,
+      "tiers": [2, 3],
+      "waves": [
+        {
+          "type": "normal",
+          "mobs": [
+            {
+              "id": "Skeleton_Soldier",
+              "count": { "2": 3, "3": 4 },
+              "stats": {
+                "2": { "hp": 1.0, "damage": 1.0, "scale": 1.0, "speed": 1.0 },
+                "3": { "hp": 1.3, "damage": 1.4, "scale": 1.1, "speed": 1.0 }
+              }
+            },
+            {
+              "id": "Skeleton_Archer",
+              "count": { "2": 1, "3": 1 },
+              "stats": {
+                "2": { "hp": 0.8, "damage": 1.2, "scale": 1.0, "speed": 1.0 },
+                "3": { "hp": 1.1, "damage": 1.5, "scale": 1.0, "speed": 1.0 }
+              }
+            }
+          ]
+        },
+        {
+          "type": "normal",
+          "mobs": [
+            {
+              "id": "Skeleton_Soldier",
+              "count": { "2": 2, "3": 3 },
+              "stats": {
+                "2": { "hp": 1.2, "damage": 1.2, "scale": 1.0, "speed": 1.0 },
+                "3": { "hp": 1.5, "damage": 1.6, "scale": 1.1, "speed": 1.0 }
+              }
+            },
+            {
+              "id": "Skeleton_Archmage",
+              "count": { "2": 1, "3": 2 },
+              "stats": {
+                "2": { "hp": 0.7, "damage": 1.5, "scale": 1.0, "speed": 1.0 },
+                "3": { "hp": 1.0, "damage": 1.8, "scale": 1.1, "speed": 1.0 }
+              }
+            }
+          ]
+        },
+        {
+          "type": "boss",
+          "bosses": [
+            {
+              "id": "Bear_Polar",
+              "stats": {
+                "2": { "hp": 0.37, "damage": 0.88, "scale": 1.0, "speed": 1.0 },
+                "3": { "hp": 0.6, "damage": 1.2, "scale": 1.1, "speed": 1.0 }
+              }
+            }
+          ]
+        }
+      ],
+      "rewardOverride": {
+        "_comment": "Custom loot for this theme - overrides default tier rewards",
+        "2": {
+          "drops": [
+            { "id": "Ingredient_Bone", "minCount": 8, "maxCount": 12, "chance": 100, "displayName": "Bones" },
+            { "id": "Ingredient_Bar_Iron", "minCount": 3, "maxCount": 5, "chance": 100, "displayName": "Iron Ingots" },
+            { "id": "Weapon_Bomb", "minCount": 2, "maxCount": 3, "chance": 100, "displayName": "Bombs" }
+          ],
+          "bonusDrops": [
+            { "id": "Ingredient_Skull", "minCount": 1, "maxCount": 1, "chance": 25, "displayName": "Skeleton Skull" }
+          ]
+        },
+        "3": {
+          "drops": [
+            { "id": "Ingredient_Bone", "minCount": 15, "maxCount": 20, "chance": 100, "displayName": "Bones" },
+            { "id": "Ingredient_Bar_Cobalt", "minCount": 3, "maxCount": 5, "chance": 100, "displayName": "Cobalt Ingots" },
+            { "id": "Potion_Health_Greater", "minCount": 1, "maxCount": 2, "chance": 100, "displayName": "Greater Health Potion" },
+            { "id": "Weapon_Bomb", "minCount": 3, "maxCount": 5, "chance": 100, "displayName": "Bombs" }
+          ],
+          "bonusDrops": [
+            { "id": "Ingredient_Skull", "minCount": 1, "maxCount": 2, "chance": 40, "displayName": "Skeleton Skull" },
+            { "id": "Weapon_Sword_Bone", "minCount": 1, "maxCount": 1, "chance": 15, "displayName": "Bone Sword" }
+          ]
+        }
+      },
+      "mobs": [],
+      "bosses": []
+    }
+  }
+}

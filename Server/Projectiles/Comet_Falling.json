@@ -1,0 +1,21 @@
+{
+  "Appearance": "Fireball",
+  "Radius": 0.3,
+  "Height": 0.6,
+  "VerticalCenterShot": 0.3,
+  "HorizontalCenterShot": 0.3,
+  "DepthShot": 1,
+  "PitchAdjustShot": false,
+  "SticksVertically": true,
+  "MuzzleVelocity": 0,
+  "TerminalVelocity": 100,
+  "Gravity": 25,
+  "Bounciness": 0,
+  "ImpactSlowdown": 0,
+  "TimeToLive": 10,
+  "Damage": 0,
+  "DeadTime": 0,
+  "DeadTimeMiss": 0,
+  "DeathEffectsOnHit": false
+}
+

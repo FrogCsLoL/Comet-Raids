@@ -1,0 +1,110 @@
+{
+    "TranslationProperties": {
+        "Name": "Comet Bench"
+    },
+    "Recipe": {
+        "TimeSeconds": 5,
+        "Input": [
+            {
+                "Quantity": 5,
+                "ItemId": "Comet_Shard_Uncommon"
+            },
+            {
+                "Quantity": 5,
+                "ResourceTypeId": "Wood_Trunk"
+            }
+        ],
+        "BenchRequirement": [
+            {
+                "Type": "Crafting",
+                "Categories": [
+                    "Workbench_Crafting"
+                ],
+                "Id": "Workbench"
+            }
+        ]
+    },
+    "Icon": "Icons/ItemsGenerated/Comet_Bench.png",
+    "Categories": [
+        "Furniture.Benches",
+        "Blocks.Crafting"
+    ],
+    "Quality": "Legendary",
+    "BlockType": {
+        "Material": "Solid",
+        "DrawType": "Model",
+        "Opacity": "Transparent",
+        "CustomModel": "Resources/CometBench/Cometbench.blockymodel",
+        "CustomModelTexture": [
+            {
+                "Texture": "Resources/CometBench/Cometbench_Texture.png",
+                "Weight": 1
+            }
+        ],
+        "HitboxType": "Bench_Alchemy",
+        "VariantRotation": "NESW",
+        "Bench": {
+            "Type": "Crafting",
+            "LocalOpenSoundEventId": "SFX_Alchemy_Bench_Open",
+            "LocalCloseSoundEventId": "SFX_Alchemy_Bench_Close",
+            "CompletedSoundEventId": "SFX_Alchemy_Bench_Craft",
+            "Categories": [
+                {
+                    "Id": "Butterfly_Daggers",
+                    "Icon": "Icons/CraftingCategories/Butterfly_Daggers.png",
+                    "Name": "Butterfly Daggers"
+                }
+            ],
+            "Id": "Comet_Bench"
+        },
+        "State": {
+            "Id": "crafting",
+            "Definitions": {
+                "CraftCompleted": {
+                    "CustomModelAnimation": "Blocks/Benches/Alchemy_Crafting.blockyanim",
+                    "Looping": true
+                },
+                "CraftCompletedInstant": {
+                    "CustomModelAnimation": "Blocks/Benches/Alchemy_Crafting.blockyanim"
+                }
+            }
+        },
+        "Gathering": {
+            "Breaking": {
+                "GatherType": "Benches",
+                "ItemId": "Comet_Bench"
+            }
+        },
+        "BlockParticleSetId": "Stone",
+        "ParticleColor": "#5C583E",
+        "Support": {
+            "Down": [
+                {
+                    "FaceType": "Full"
+                }
+            ]
+        },
+        "BlockSoundSetId": "Stone"
+    },
+    "PlayerAnimationsId": "Block",
+    "IconProperties": {
+        "Scale": 0.435,
+        "Translation": [
+            11.4,
+            -18.6
+        ],
+        "Rotation": [
+            22.5,
+            45,
+            22.5
+        ]
+    },
+    "Tags": {
+        "Type": [
+            "Bench"
+        ]
+    },
+    "MaxStack": 1,
+    "ItemLevel": 9,
+    "ItemSoundSetId": "ISS_Blocks_Wood"
+}
