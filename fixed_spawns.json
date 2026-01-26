@@ -1,0 +1,51 @@
+{
+  "_comment": "Fixed comet spawn points. Use cooldownSeconds OR scheduledTimes (real-world times like 18:00).",
+  "_options": {
+    "name": "Custom name to identify this spawn point (optional)",
+    "enabled": "true/false - enable or disable this spawn point",
+    "cooldownSeconds": "Seconds between spawns (used if scheduledTimes is empty)",
+    "scheduledTimes": "Array of real-world times like [\"18:00\", \"06:00\"] - spawns at these times daily",
+    "tier": "Uncommon, Rare, Epic, or Legendary (optional, random if not set)",
+    "theme": "Theme name like Skeleton Horde (optional, random if not set)",
+    "despawnMinutes": "Custom despawn time for this spawn point (optional, uses global if not set)",
+    "notifyRadius": "Notification: omit = 100 blocks, 'none' = no notification, 'global' = all players, number = custom radius",
+    "notifyTitle": "Custom notification title (optional, default: 'Tier Comet Falling!')",
+    "notifySubtitle": "Custom notification subtitle (optional, default: 'Watch the sky!')"
+  },
+  "_examples": {
+    "cooldown_spawn": {
+      "x": 100,
+      "y": 64,
+      "z": 200,
+      "name": "Town Square",
+      "enabled": true,
+      "cooldownSeconds": 300,
+      "tier": "Epic",
+      "theme": "Trork Warband"
+    },
+    "scheduled_spawn": {
+      "x": -50,
+      "y": 70,
+      "z": 150,
+      "name": "Evening Raid",
+      "enabled": true,
+      "scheduledTimes": ["18:00", "06:00", "12:00"],
+      "tier": "Legendary",
+      "theme": "Void"
+    },
+    "custom_notification": {
+      "x": 200,
+      "y": 64,
+      "z": 300,
+      "name": "Boss Arena",
+      "enabled": true,
+      "cooldownSeconds": 600,
+      "tier": "Legendary",
+      "notifyRadius": "global",
+      "notifyTitle": "The Arena Awakens!",
+      "notifySubtitle": "A legendary challenge awaits..."
+    }
+  },
+  "spawns": [
+  ]
+}

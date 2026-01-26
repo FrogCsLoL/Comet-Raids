@@ -1,5 +1,6 @@
 {
   "spawnSettings": {
+    "naturalSpawnsEnabled": true,
     "minDelaySeconds": 120,
     "maxDelaySeconds": 300,
     "spawnChance": 0.4,
@@ -331,6 +332,7 @@
   "themes": {
     "skeleton": {
       "displayName": "Skeleton Horde",
+      "naturalSpawn": true,
       "tiers": [
         1,
         2
@@ -431,6 +433,7 @@
     },
     "goblin": {
       "displayName": "Goblin Gang",
+      "naturalSpawn": true,
       "tiers": [
         1,
         2
@@ -531,6 +534,7 @@
     },
     "spider": {
       "displayName": "Spider Swarm",
+      "naturalSpawn": true,
       "tiers": [
         1,
         2
@@ -581,6 +585,7 @@
     },
     "trork": {
       "displayName": "Trork Warband",
+      "naturalSpawn": true,
       "tiers": [
         1,
         2,
@@ -737,6 +742,7 @@
     },
     "skeleton_sand": {
       "displayName": "Sand Skeleton Legion",
+      "naturalSpawn": true,
       "tiers": [
         1,
         2,
@@ -932,6 +938,7 @@
     },
     "sabertooth": {
       "displayName": "Sabertooth Pack",
+      "naturalSpawn": true,
       "tiers": [
         1,
         2,
@@ -1013,6 +1020,7 @@
     },
     "outlander": {
       "displayName": "Outlander Cult",
+      "naturalSpawn": true,
       "tiers": [
         2,
         3,
@@ -1145,6 +1153,7 @@
     },
     "leopard": {
       "displayName": "Snow Leopard Pride",
+      "naturalSpawn": true,
       "tiers": [
         2,
         3,
@@ -1209,6 +1218,7 @@
     },
     "skeleton_burnt": {
       "displayName": "Burnt Legion",
+      "naturalSpawn": true,
       "tiers": [
         3,
         4
@@ -1310,6 +1320,7 @@
     },
     "void": {
       "displayName": "Voidspawn",
+      "naturalSpawn": true,
       "tiers": [
         1,
         2,
@@ -1434,6 +1445,7 @@
     },
     "ice": {
       "displayName": "Legendary Ice",
+      "naturalSpawn": true,
       "tiers": [
         3,
         4
@@ -1547,6 +1559,7 @@
     },
     "burnt_legendary": {
       "displayName": "Legendary Burnt",
+      "naturalSpawn": true,
       "tiers": [
         3,
         4
@@ -1660,6 +1673,7 @@
     },
     "lava": {
       "displayName": "Legendary Lava",
+      "naturalSpawn": true,
       "tiers": [
         3,
         4
@@ -1743,6 +1757,7 @@
     },
     "earth": {
       "displayName": "Legendary Earth",
+      "naturalSpawn": true,
       "tiers": [
         3,
         4
@@ -1838,6 +1853,7 @@
     },
     "undead": {
       "displayName": "Undead Horde",
+      "naturalSpawn": true,
       "tiers": [
         1,
         2,
@@ -2024,6 +2040,7 @@
     },
     "zombie": {
       "displayName": "Zombie Aberration",
+      "naturalSpawn": true,
       "tiers": [
         3,
         4
@@ -2076,7 +2093,7 @@
     "_comment_multiwave": "EXAMPLE: Multi-wave theme with 2 normal waves + 1 boss wave",
     "skeleton_siege": {
       "displayName": "Skeleton Siege",
-      "testOnly": true,
+      "naturalSpawn": false,
       "tiers": [2, 3],
       "waves": [
         {

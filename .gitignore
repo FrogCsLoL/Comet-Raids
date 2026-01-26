@@ -1,0 +1,10 @@
+# Build files
+build.bat
+build/
+com/
+
+# Tools
+tools/
+
+# Agent
+.agent/

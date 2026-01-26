@@ -19,9 +19,10 @@ public class ThemeConfigWriter {
             double despawnTimeMinutes, int minSpawnDistance, int maxSpawnDistance,
             Map<String, ThemeConfig> themes, Map<Integer, TierSettings> tierSettings,
             Map<Integer, TierRewards> rewardSettings) {
-        // Call overloaded method with null for zoneSpawnChances (for backward compatibility)
+        // Call overloaded method with defaults for new parameters
         return generateFullConfig(minDelaySeconds, maxDelaySeconds, spawnChance,
                 despawnTimeMinutes, minSpawnDistance, maxSpawnDistance,
+                true, false, // naturalSpawnsEnabled, globalComets
                 themes, tierSettings, rewardSettings, null);
     }
 
@@ -33,18 +34,36 @@ public class ThemeConfigWriter {
             double despawnTimeMinutes, int minSpawnDistance, int maxSpawnDistance,
             Map<String, ThemeConfig> themes, Map<Integer, TierSettings> tierSettings,
             Map<Integer, TierRewards> rewardSettings, Map<String, ZoneSpawnChances> zoneSpawnChances) {
+        // Call overloaded method with defaults for new parameters
+        return generateFullConfig(minDelaySeconds, maxDelaySeconds, spawnChance,
+                despawnTimeMinutes, minSpawnDistance, maxSpawnDistance,
+                true, false, // naturalSpawnsEnabled, globalComets
+                themes, tierSettings, rewardSettings, zoneSpawnChances);
+    }
+
+    /**
+     * Generate complete config JSON with all settings including natural spawns toggle
+     */
+    public static String generateFullConfig(
+            int minDelaySeconds, int maxDelaySeconds, double spawnChance,
+            double despawnTimeMinutes, int minSpawnDistance, int maxSpawnDistance,
+            boolean naturalSpawnsEnabled, boolean globalComets,
+            Map<String, ThemeConfig> themes, Map<Integer, TierSettings> tierSettings,
+            Map<Integer, TierRewards> rewardSettings, Map<String, ZoneSpawnChances> zoneSpawnChances) {
 
         StringBuilder sb = new StringBuilder();
         sb.append("{\n");
 
         // Spawn settings section
         sb.append(INDENT).append("\"spawnSettings\": {\n");
+        sb.append(INDENT).append(INDENT).append("\"naturalSpawnsEnabled\": ").append(naturalSpawnsEnabled).append(",\n");
         sb.append(INDENT).append(INDENT).append("\"minDelaySeconds\": ").append(minDelaySeconds).append(",\n");
         sb.append(INDENT).append(INDENT).append("\"maxDelaySeconds\": ").append(maxDelaySeconds).append(",\n");
         sb.append(INDENT).append(INDENT).append("\"spawnChance\": ").append(spawnChance).append(",\n");
         sb.append(INDENT).append(INDENT).append("\"despawnTimeMinutes\": ").append(despawnTimeMinutes).append(",\n");
         sb.append(INDENT).append(INDENT).append("\"minSpawnDistance\": ").append(minSpawnDistance).append(",\n");
-        sb.append(INDENT).append(INDENT).append("\"maxSpawnDistance\": ").append(maxSpawnDistance).append("\n");
+        sb.append(INDENT).append(INDENT).append("\"maxSpawnDistance\": ").append(maxSpawnDistance).append(",\n");
+        sb.append(INDENT).append(INDENT).append("\"globalComets\": ").append(globalComets).append("\n");
         sb.append(INDENT).append("},\n\n");
 
         // Zone spawn chances section

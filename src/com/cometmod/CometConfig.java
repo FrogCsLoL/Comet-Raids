@@ -41,6 +41,9 @@ public class CometConfig {
     public int minSpawnDistance = 30;
     public int maxSpawnDistance = 50;
 
+    // Natural spawns toggle - if false, comets only spawn from fixed spawn points
+    public boolean naturalSpawnsEnabled = true;
+
     // Global comets setting - if true, any player can trigger any comet (not just the owner)
     public boolean globalComets = false;
 
@@ -247,6 +250,11 @@ public class CometConfig {
                 if (value != null)
                     config.globalComets = Boolean.parseBoolean(value);
             }
+            if (parseFrom.contains("\"naturalSpawnsEnabled\"")) {
+                String value = extractJsonValue(parseFrom, "naturalSpawnsEnabled");
+                if (value != null)
+                    config.naturalSpawnsEnabled = Boolean.parseBoolean(value);
+            }
 
             // Parse themes using ThemeConfigParser
             config.themes = ThemeConfigParser.parseThemes(json);
@@ -379,6 +387,7 @@ public class CometConfig {
             String json = ThemeConfigWriter.generateFullConfig(
                     minDelaySeconds, maxDelaySeconds, spawnChance,
                     despawnTimeMinutes, minSpawnDistance, maxSpawnDistance,
+                    naturalSpawnsEnabled, globalComets,
                     themes, tierSettings, rewardSettings, zoneSpawnChances);
             writer.write(json);
             writer.flush();
@@ -429,7 +438,7 @@ public class CometConfig {
     }
 
     /**
-     * Get all themes available for a specific tier (excludes testOnly themes)
+     * Get all themes available for a specific tier (excludes themes with naturalSpawn: false)
      *
      * @param tier The comet tier (1-4)
      * @return List of themes that can spawn naturally at this tier
@@ -437,8 +446,8 @@ public class CometConfig {
     public List<ThemeConfig> getThemesForTier(int tier) {
         List<ThemeConfig> result = new ArrayList<>();
         for (ThemeConfig theme : themeList) {
-            // Skip testOnly themes - they can only be spawned manually
-            if (theme.isTestOnly()) {
+            // Skip themes with naturalSpawn: false - they can only be spawned manually
+            if (!theme.isNaturalSpawn()) {
                 continue;
             }
             if (theme.isAvailableForTier(tier)) {

@@ -197,11 +197,43 @@ public class CometWaveManager {
 
     /**
      * Get all comet owners for map marker filtering
-     * 
+     *
      * @return Map of comet positions to their owner UUIDs
      */
     public Map<Vector3i, java.util.UUID> getCometOwners() {
         return new HashMap<>(cometOwners); // Return a copy for thread safety
+    }
+
+    /**
+     * Check if there's an active comet near the given position
+     *
+     * @param x        X coordinate
+     * @param y        Y coordinate
+     * @param z        Z coordinate
+     * @param distance Maximum distance to check
+     * @return true if there's an active comet within distance
+     */
+    public boolean hasActiveCometNear(int x, int y, int z, int distance) {
+        for (Vector3i pos : activeComets.keySet()) {
+            double dx = pos.x - x;
+            double dy = pos.y - y;
+            double dz = pos.z - z;
+            double dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+            if (dist <= distance) {
+                return true;
+            }
+        }
+        // Also check cometTiers for registered but not yet activated comets
+        for (Vector3i pos : cometTiers.keySet()) {
+            double dx = pos.x - x;
+            double dy = pos.y - y;
+            double dz = pos.z - z;
+            double dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+            if (dist <= distance) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

@@ -87,9 +87,16 @@ public class ThemeConfigParser {
             Boolean randomBossSelection = extractBooleanValue(json, "randomBossSelection");
             theme.setRandomBossSelection(randomBossSelection != null ? randomBossSelection : false);
 
-            // Parse testOnly (default false) - if true, theme won't spawn naturally
-            Boolean testOnly = extractBooleanValue(json, "testOnly");
-            theme.setTestOnly(testOnly != null ? testOnly : false);
+            // Parse naturalSpawn (default true) - if false, theme won't spawn naturally
+            // Also supports legacy "testOnly" field (inverted logic) for backwards compatibility
+            Boolean naturalSpawn = extractBooleanValue(json, "naturalSpawn");
+            if (naturalSpawn != null) {
+                theme.setNaturalSpawn(naturalSpawn);
+            } else {
+                // Check for legacy testOnly field (inverted: testOnly=true means naturalSpawn=false)
+                Boolean testOnly = extractBooleanValue(json, "testOnly");
+                theme.setNaturalSpawn(testOnly != null ? !testOnly : true);
+            }
 
             // Parse tiers array
             List<Integer> tiers = extractIntArray(json, "tiers");

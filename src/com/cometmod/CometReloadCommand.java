@@ -42,6 +42,14 @@ public class CometReloadCommand extends AbstractWorldCommand {
             // Apply despawn time
             CometFallingSystem.setDespawnTimeMinutes(config.despawnTimeMinutes);
 
+            // Reload fixed spawn points
+            FixedSpawnManager fixedSpawnManager = CometModPlugin.getFixedSpawnManager();
+            int fixedSpawnCount = 0;
+            if (fixedSpawnManager != null) {
+                fixedSpawnManager.reload();
+                fixedSpawnCount = fixedSpawnManager.getSpawnPoints().size();
+            }
+
             // Report results
             StringBuilder sb = new StringBuilder();
             sb.append("Configuration reloaded!\n");
@@ -52,7 +60,8 @@ public class CometReloadCommand extends AbstractWorldCommand {
             sb.append("  - Distance: ").append(config.minSpawnDistance).append("-").append(config.maxSpawnDistance)
                     .append(" blocks\n");
             sb.append("  - Despawn: ").append(config.despawnTimeMinutes).append(" min\n");
-            sb.append("Themes: ").append(config.getThemeCount()).append(" loaded");
+            sb.append("Themes: ").append(config.getThemeCount()).append(" loaded\n");
+            sb.append("Fixed Spawns: ").append(fixedSpawnCount).append(" configured");
 
             if (!config.hasThemes()) {
                 sb.append("\nWARNING: No themes defined! Waves will not work!");

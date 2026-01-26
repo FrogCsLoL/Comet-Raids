@@ -38,6 +38,8 @@ The tier of comet that spawns depends on the zone you're in:
 
 ## Commands
 
+### Main Commands
+
 | Command | Description |
 |---------|-------------|
 | `/comet spawn` | Spawns an Uncommon comet near you |
@@ -45,10 +47,30 @@ The tier of comet that spawns depends on the zone you're in:
 | `/comet spawn --theme Skeleton` | Spawns with a specific theme |
 | `/comet spawn --tier Legendary --theme Void` | Combine tier and theme |
 | `/comet spawn --onme true` | Spawns comet directly above you (for testing) |
+| `/comet test` | Simulates automatic zone-based comet spawn for your location |
+| `/comet zone` | Shows your current zone and comet tier distribution |
+| `/comet destroyall` | Removes all active comet blocks in the world |
 | `/comet reload` | Reloads the config from file |
-| `/comet test` | Testing utilities |
-| `/comet zone` | Zone management |
-| `/comet destroyall` | Removes all active comets |
+
+### Fixed Spawn Point Commands
+
+These commands let you set up spawn points that automatically spawn comets at specific locations.
+
+| Command | Description |
+|---------|-------------|
+| `/comet setspawn <cooldown>` | Add a fixed spawn point with cooldown in seconds |
+| `/comet schedulespawn <times>` | Add a spawn point with real-world times (e.g. `18:00,06:00`) |
+| `/comet removespawn` | Remove the nearest spawn point (within 10 blocks) |
+| `/comet removespawn --target <name or index>` | Remove a spawn point by name or index number |
+| `/comet listspawns` | List all configured fixed spawn points |
+
+**Optional flags for setspawn/schedulespawn:**
+`--name`, `--tier`, `--theme`, `--despawnMinutes`, `--notifyRadius`, `--notifyTitle`, `--notifySubtitle`
+
+**Full example:**
+```
+/comet setspawn 300 --name "Boss Arena" --tier Epic --theme Trork --notifyRadius global --notifyTitle "Boss Incoming!"
+```
 
 ### Spawn Command Examples
 
@@ -61,7 +83,19 @@ The tier of comet that spawns depends on the zone you're in:
 /comet spawn --onme true --tier Legendary
 ```
 
+### More Fixed Spawn Examples
+
+```
+/comet setspawn 300                                     # Basic cooldown spawn
+/comet setspawn 600 --tier Epic --theme Trork           # With tier and theme
+/comet setspawn 300 --notifyRadius none                 # No notification
+/comet schedulespawn 18:00,06:00 --name "Evening Raid"  # Scheduled times
+/comet removespawn --target "Town Square"               # Remove by name
+```
+
 ### Available Themes
+
+> Tier 1 = Uncommon, Tier 2 = Rare, Tier 3 = Epic, Tier 4 = Legendary
 
 - `Skeleton` - Skeleton Horde (Tier 1-2)
 - `Goblin` - Goblin Gang (Tier 1-2)
@@ -84,11 +118,62 @@ The tier of comet that spawns depends on the zone you're in:
 
 All settings live in `comet_config.json`. Open it with any text editor.
 
+### Fixed Spawn Points
+
+Fixed spawn points are stored in a separate file: `fixed_spawns.json`. You can edit this file directly or use the in-game commands.
+
+Each spawn point supports two modes:
+- **Cooldown mode**: Spawns a comet every X seconds
+- **Scheduled mode**: Spawns at specific real-world times (24-hour format)
+
+```json
+{
+  "spawns": [
+    {
+      "x": 100,
+      "y": 64,
+      "z": 200,
+      "name": "Town Square",
+      "enabled": true,
+      "cooldownSeconds": 300,
+      "tier": "Epic",
+      "theme": "Trork Warband",
+      "despawnMinutes": 15.0
+    },
+    {
+      "x": -50,
+      "y": 70,
+      "z": 150,
+      "name": "Evening Raid",
+      "enabled": true,
+      "scheduledTimes": ["18:00", "06:00", "12:00"],
+      "tier": "Legendary",
+      "notifyRadius": "global",
+      "notifyTitle": "The Arena Awakens!",
+      "notifySubtitle": "A legendary challenge awaits..."
+    }
+  ]
+}
+```
+
+**Options:**
+- `name` - Custom name to identify this spawn point (optional, used for removal by name)
+- `enabled` - true/false to enable or disable this spawn point
+- `cooldownSeconds` - Seconds between spawns (used if scheduledTimes is empty)
+- `scheduledTimes` - Array of real-world times like `["18:00", "06:00"]` - spawns at these times daily
+- `tier` - Uncommon, Rare, Epic, or Legendary (optional, random if not set)
+- `theme` - Theme name like "Skeleton Horde" (optional, random if not set)
+- `despawnMinutes` - Custom despawn time for this spawn point (optional, uses global if not set)
+- `notifyRadius` - Notification radius: omit = 100 blocks (default), `"none"` = no notification, `"global"` = all players, number = custom radius in blocks
+- `notifyTitle` - Custom notification title (optional, default: "Tier Comet Falling!")
+- `notifySubtitle` - Custom notification subtitle (optional, default: "Watch the sky!")
+
 ### Main Sections
 
 **spawnSettings** - Controls natural comet spawning
 ```json
 "spawnSettings": {
+  "naturalSpawnsEnabled": true, // Set to false to disable random spawns (use only fixed spawn points)
   "minDelaySeconds": 120,      // Minimum time between spawn attempts
   "maxDelaySeconds": 300,      // Maximum time between spawn attempts
   "spawnChance": 0.4,          // 40% chance to spawn when timer triggers
@@ -98,6 +183,8 @@ All settings live in `comet_config.json`. Open it with any text editor.
   "globalComets": false        // If true, any player can trigger any comet
 }
 ```
+
+> **Tip:** If you want comets to only spawn at fixed locations, set `"naturalSpawnsEnabled": false` and configure spawn points in `fixed_spawns.json`.
 
 **zoneSpawnChances** - Tier distribution per zone
 ```json
@@ -144,7 +231,7 @@ Themes can have custom reward overrides that replace the default tier rewards:
 ```json
 "skeleton_siege": {
   "displayName": "Skeleton Siege",
-  "testOnly": true,           // Won't spawn naturally, only via command
+  "naturalSpawn": false,      // Won't spawn naturally, only via command
   "tiers": [2, 3],
   "waves": [...],
   "rewardOverride": {
@@ -156,7 +243,7 @@ Themes can have custom reward overrides that replace the default tier rewards:
 }
 ```
 
-Use `"testOnly": true` on themes you're testing to prevent them from spawning naturally.
+Use `"naturalSpawn": false` on themes you're testing to prevent them from spawning naturally.
 
 ### Creating Custom Themes
 
@@ -166,17 +253,19 @@ Want to make your own encounters? Check the `skeleton_siege` theme at the bottom
 - Set per-tier stats for each mob (HP, damage, scale, speed)
 - Configure boss waves separately from normal waves
 - Override the default loot table with custom rewards per tier
-- Use `"testOnly": true` to prevent a theme from spawning naturally while you test it
+- Use `"naturalSpawn": false` to prevent a theme from spawning naturally while you test it
 
 The config is fully JSON - just copy an existing theme, rename it, and start tweaking.
 
+> **Tip for Fixed Spawn Points:** If you're creating a custom theme specifically for fixed spawn points (like boss arenas), set `"naturalSpawn": false` on that theme so it only spawns at your configured locations, not randomly in the world.
+
 ## Source Code
 
-Source is available at [INSERT REPO LINK HERE]
+Source is available at https://github.com/FrogCsLoL/Comet-Raids/tree/main
 
 ## Bug Reports
 
-Found a bug? Report it at [INSERT ISSUE TRACKER LINK HERE] or reach out directly. Include what you were doing, any error messages from the server console, and whether you're running singleplayer or multiplayer.
+Found a bug? Report it on Curseforge or Github. Include what you were doing, any error messages from the server console, and whether you're running singleplayer or multiplayer.
 
 ## Usage & Distribution
 
@@ -185,6 +274,9 @@ This mod is free to use, modify, and redistribute. Just credit me (Frog) somewhe
 ## Credits
 
 Created by **Frog**
+
+Ty to Pferd for balancing this Mod.
+
 
 Some parts of this mod were made with AI assistance - mainly coding help and upscaling some visual assets like the mod icon.
 

@@ -1,9 +1,13 @@
 {
   "Group": "CustomMod",
-  "Name": "Comet Mod",
+  "Name": "Comet Raids",
   "Version": "1.0.0",
-  "Description": "Comet blocks that spawn waves of mobs when activated",
-  "Authors": [],
+  "Description": "Comets that spawn waves of mobs when activated",
+  "Authors": [
+    {
+      "Name": "Frog"
+    }
+  ],
   "Website": "",
   "Dependencies": {},
   "OptionalDependencies": {},

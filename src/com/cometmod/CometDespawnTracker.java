@@ -21,9 +21,12 @@ public class CometDespawnTracker {
     
     // Track active comets: position -> spawn timestamp (milliseconds since epoch)
     private final Map<String, Long> cometSpawnTimes = new ConcurrentHashMap<>();
-    
+
     // Track comet tiers for logging
     private final Map<String, String> cometTiers = new ConcurrentHashMap<>();
+
+    // Track custom despawn times per comet (null = use global)
+    private final Map<String, Double> customDespawnTimes = new ConcurrentHashMap<>();
     
     // Flag to prevent processing multiple times
     private boolean hasProcessedStartup = false;
@@ -68,11 +71,27 @@ public class CometDespawnTracker {
      * Register a new comet that just spawned
      */
     public void registerComet(Vector3i pos, String tierName) {
+        registerComet(pos, tierName, null);
+    }
+
+    /**
+     * Register a new comet with custom despawn time
+     * @param pos The comet position
+     * @param tierName The tier name for logging
+     * @param customDespawnMinutes Custom despawn time in minutes (null = use global)
+     */
+    public void registerComet(Vector3i pos, String tierName, Double customDespawnMinutes) {
         String key = posToKey(pos);
         long spawnTime = System.currentTimeMillis();
         cometSpawnTimes.put(key, spawnTime);
         cometTiers.put(key, tierName);
-        LOGGER.info("Registered comet at " + pos + " (tier: " + tierName + ") spawn time: " + spawnTime);
+        if (customDespawnMinutes != null) {
+            customDespawnTimes.put(key, customDespawnMinutes);
+            LOGGER.info("Registered comet at " + pos + " (tier: " + tierName + ") spawn time: " + spawnTime + " custom despawn: " + customDespawnMinutes + " min");
+        } else {
+            customDespawnTimes.remove(key);
+            LOGGER.info("Registered comet at " + pos + " (tier: " + tierName + ") spawn time: " + spawnTime);
+        }
         save();
     }
     
@@ -83,9 +102,22 @@ public class CometDespawnTracker {
         String key = posToKey(pos);
         if (cometSpawnTimes.remove(key) != null) {
             cometTiers.remove(key);
+            customDespawnTimes.remove(key);
             LOGGER.info("Unregistered comet at " + pos);
             save();
         }
+    }
+
+    /**
+     * Get the despawn time for a specific comet in minutes (custom or global)
+     */
+    public double getDespawnTimeForComet(Vector3i pos) {
+        String key = posToKey(pos);
+        Double custom = customDespawnTimes.get(key);
+        if (custom != null) {
+            return custom;
+        }
+        return CometFallingSystem.getDespawnTimeMinutes();
     }
     
     /**

@@ -14,5 +14,9 @@ public class CometCommand extends AbstractCommandCollection {
         addSubCommand(new SpawnCustomNPCCommand());
         addSubCommand(new CometDestroyAllCommand());
         addSubCommand(new CometReloadCommand());
+        addSubCommand(new CometSetSpawnCommand());
+        addSubCommand(new CometScheduleSpawnCommand());
+        addSubCommand(new CometRemoveSpawnCommand());
+        addSubCommand(new CometListSpawnsCommand());
     }
 }

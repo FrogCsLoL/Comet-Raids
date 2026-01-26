@@ -119,6 +119,13 @@ public class CometSpawnTask {
     
     private void checkAndSpawn() {
         try {
+            // Check if natural spawns are enabled
+            CometConfig config = CometConfig.getInstance();
+            if (config != null && !config.naturalSpawnsEnabled) {
+                scheduleNextSpawn();
+                return;
+            }
+
             Random random = new Random();
 
             if (random.nextDouble() > spawnChance) {

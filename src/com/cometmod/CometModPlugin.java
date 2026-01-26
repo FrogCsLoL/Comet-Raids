@@ -17,6 +17,7 @@ public class CometModPlugin extends JavaPlugin {
     private CometFallingSystem fallingSystem;
     private CometSpawnTask spawnTask;
     private CometConfig config;
+    private FixedSpawnManager fixedSpawnManager;
 
     public CometModPlugin(JavaPluginInit init) {
         super(init);
@@ -59,6 +60,11 @@ public class CometModPlugin extends JavaPlugin {
                         } catch (Exception ex) {
                             LOGGER.warning("Failed to process despawn tracker: " + ex.getMessage());
                         }
+
+                        // Start fixed spawn manager
+                        if (instance.fixedSpawnManager != null) {
+                            instance.fixedSpawnManager.start(world, store);
+                        }
                     }
                 } catch (Exception e) {
                     LOGGER.warning("Failed to initialize CometSpawnTask: " + e.getMessage());
@@ -69,6 +75,10 @@ public class CometModPlugin extends JavaPlugin {
 
     public static CometSpawnTask getSpawnTask() {
         return instance != null ? instance.spawnTask : null;
+    }
+
+    public static FixedSpawnManager getFixedSpawnManager() {
+        return instance != null ? instance.fixedSpawnManager : null;
     }
 
     public CometConfig getConfig() {
@@ -121,6 +131,11 @@ public class CometModPlugin extends JavaPlugin {
                                                 CometDespawnTracker.getInstance().processOnStartup(world, despawnMinutes);
                                             } catch (Exception ex) {
                                                 // Ignore
+                                            }
+
+                                            // Start fixed spawn manager
+                                            if (this.fixedSpawnManager != null) {
+                                                this.fixedSpawnManager.start(world, store);
                                             }
                                         }
                                     }
@@ -207,6 +222,10 @@ public class CometModPlugin extends JavaPlugin {
 
         this.spawnTask = null;
         this.config = config;
+
+        // Initialize fixed spawn manager
+        this.fixedSpawnManager = new FixedSpawnManager();
+        this.fixedSpawnManager.load();
         this.fallingCheckTask = com.hypixel.hytale.server.core.HytaleServer.SCHEDULED_EXECUTOR.scheduleWithFixedDelay(
                 () -> {
                     try {
@@ -249,6 +268,7 @@ public class CometModPlugin extends JavaPlugin {
         if (timeoutTask != null) timeoutTask.cancel(false);
         if (fallingCheckTask != null) fallingCheckTask.cancel(false);
         if (spawnTask != null) spawnTask.stop();
+        if (fixedSpawnManager != null) fixedSpawnManager.stop();
         waveManager.cleanup();
     }
 

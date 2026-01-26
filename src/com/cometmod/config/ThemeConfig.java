@@ -18,7 +18,7 @@ public class ThemeConfig {
     private List<BossEntry> bosses;
     private boolean useTierSuffix;
     private boolean randomBossSelection;
-    private boolean testOnly;  // If true, theme won't spawn naturally (manual spawn only)
+    private boolean naturalSpawn;  // If false, theme won't spawn naturally (manual spawn only)
 
     // Multi-wave support: if waves is non-empty, it overrides mobs/bosses
     private List<WaveEntry> waves;
@@ -34,7 +34,7 @@ public class ThemeConfig {
         this.bosses = new ArrayList<>();
         this.useTierSuffix = true;
         this.randomBossSelection = false;
-        this.testOnly = false;
+        this.naturalSpawn = true;
         this.waves = new ArrayList<>();
         this.rewardOverride = new LinkedHashMap<>();
     }
@@ -78,8 +78,8 @@ public class ThemeConfig {
         return randomBossSelection;
     }
 
-    public boolean isTestOnly() {
-        return testOnly;
+    public boolean isNaturalSpawn() {
+        return naturalSpawn;
     }
 
     // Setters
@@ -111,8 +111,8 @@ public class ThemeConfig {
         this.randomBossSelection = randomBossSelection;
     }
 
-    public void setTestOnly(boolean testOnly) {
-        this.testOnly = testOnly;
+    public void setNaturalSpawn(boolean naturalSpawn) {
+        this.naturalSpawn = naturalSpawn;
     }
 
     // ========== REWARD OVERRIDE ==========
